@@ -1,14 +1,14 @@
 <!doctype html>
-<html lang="en" ng-app="phonecatApp" ng-controller="PhoneListCtrl">
+<html lang="en" ng-app="phonecatApp">
 <head>
   <meta charset="utf-8">
-  <title ng-bind-template="Google Phone Gallery: {{query}}">Google Phone Gallery</title>
+  <title>Google Phone Gallery</title>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="css/app.css">
   <script src="bower_components/angular/angular.js"></script>
   <script src="js/controllers.js"></script>
 </head>
-<body>
+<body ng-controller="PhoneListCtrl">
 
   <div class="container-fluid">
     <div class="row">
@@ -16,14 +16,18 @@
         <!--Sidebar content-->
 
         Search: <input ng-model="query">
+        Sort by:
+        <select ng-model="orderProp">
+          <option value="name">Alphabetical</option>
+          <option value="age">Newest</option>
+        </select>
 
       </div>
       <div class="col-md-10">
         <!--Body content-->
-	<p>The Current Query is: {{query}}</p>
 
         <ul class="phones">
-          <li ng-repeat="phone in phones | filter:query">
+          <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
             <span>{{phone.name}}</span>
             <p>{{phone.snippet}}</p>
           </li>
