@@ -1,28 +1,30 @@
 0 info it worked if it ends with ok
 1 verbose cli [ 'c:\\Program Files (x86)\\nodejs\\node.exe',
 1 verbose cli   'c:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
-1 verbose cli   'start',
-1 verbose cli   'LICENSE',
-1 verbose cli   'README.md',
-1 verbose cli   'app',
-1 verbose cli   'bower.json',
-1 verbose cli   'node_modules',
-1 verbose cli   'npm-debug.log',
-1 verbose cli   'package.json',
-1 verbose cli   'scripts',
-1 verbose cli   'test' ]
+1 verbose cli   'run',
+1 verbose cli   'protractor' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.35
-4 error Error: ENOENT, open 'c:\Users\Patthsu\Documents\UCSD\WI15\CSE 112\angular-phonecat\node_modules\LICENSE\package.json'
-5 error If you need help, you may report this *entire* log,
-5 error including the npm and node versions, at:
-5 error     <http://github.com/npm/npm/issues>
-6 error System Windows_NT 6.2.9200
-7 error command "c:\\Program Files (x86)\\nodejs\\node.exe" "c:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "start" "LICENSE" "README.md" "app" "bower.json" "node_modules" "npm-debug.log" "package.json" "scripts" "test"
-8 error cwd c:\Users\Patthsu\Documents\UCSD\WI15\CSE 112\angular-phonecat
-9 error node -v v0.10.35
-10 error npm -v 1.4.28
-11 error path c:\Users\Patthsu\Documents\UCSD\WI15\CSE 112\angular-phonecat\node_modules\LICENSE\package.json
-12 error code ENOENT
-13 error errno 34
-14 verbose exit [ 34, true ]
+4 verbose run-script [ 'preprotractor', 'protractor', 'postprotractor' ]
+5 info preprotractor angular-phonecat@0.0.0
+6 verbose unsafe-perm in lifecycle true
+7 info protractor angular-phonecat@0.0.0
+8 verbose unsafe-perm in lifecycle true
+9 info angular-phonecat@0.0.0 Failed to exec protractor script
+10 error angular-phonecat@0.0.0 protractor: `protractor test/protractor-conf.js`
+10 error Exit status 1
+11 error Failed at the angular-phonecat@0.0.0 protractor script.
+11 error This is most likely a problem with the angular-phonecat package,
+11 error not with npm itself.
+11 error Tell the author that this fails on your system:
+11 error     protractor test/protractor-conf.js
+11 error You can get their info via:
+11 error     npm owner ls angular-phonecat
+11 error There is likely additional logging output above.
+12 error System Windows_NT 6.2.9200
+13 error command "c:\\Program Files (x86)\\nodejs\\node.exe" "c:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "protractor"
+14 error cwd c:\Users\Patthsu\Documents\UCSD\WI15\CSE 112\angular-phonecat
+15 error node -v v0.10.35
+16 error npm -v 1.4.28
+17 error code ELIFECYCLE
+18 verbose exit [ 1, true ]
